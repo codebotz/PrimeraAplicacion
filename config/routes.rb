@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   #Configuración de páginas
   get 'about' => 'pages#about'
 
+  get 'archivoprueba' => 'prueba#archivoprueba'
+  get 'rails' => 'prueba#rails'
+
 end
