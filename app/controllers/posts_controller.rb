@@ -20,8 +20,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     #modificando para pasar parametro de id usuario
-    #@post = Post.new
-    @post = current_user.posts.build
+    @post = Post.new
+    #@post = current_user.posts.build
   end
 
   # GET /posts/1/edit
