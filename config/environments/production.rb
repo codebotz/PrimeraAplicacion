@@ -83,4 +83,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #require for Heroku
+  #aqui poner el servidor de produccion (bluehost, heroku, etc)
+  #para las pruebas pondre la ur de la aplicacion en heroku
+  #el puerto no se si sea el 3000, pero si esta 3000 es porque sí sirvió ese xD
+  config.action_mailer.default_url_options = { host: 'https://duscae.herokuapp.com/', port: 3000 }
+
 end

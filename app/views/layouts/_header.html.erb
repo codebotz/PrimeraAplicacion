@@ -15,6 +15,8 @@
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><%= link_to "Inicio", root_path %></li>
 		        <li><%= link_to "Acerca", about_path %></li>
+		        <% if user_signed_in? %>
+		        <li><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete%></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Otras páginas<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
@@ -23,6 +25,9 @@
 		            <li><%= link_to "Rails", rails_path %></li>
 		          </ul>
 		        </li>
+		        <% else %>
+		        <li><%= link_to 'Iniciar sesión', new_user_session_path%></li>
+		        <% end %>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container -->

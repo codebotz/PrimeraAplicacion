@@ -39,7 +39,13 @@ gem 'jbuilder', '~> 2.5'
 #gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
+#Devise. Autenticación de usuarios para rails
+gem 'devise', '~> 4.2', '>= 4.2.1'
 
+#Bcrypt. Instalando gema para hasheo de contraseñas
+#gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'bcrypt', '~> 3.1.11'
+#gem 'bcrypt', platforms: :ruby
 
 
 

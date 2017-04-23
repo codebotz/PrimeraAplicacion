@@ -1,6 +1,13 @@
 <div class="jumbotron center">
 	<h1>Bienvenido a Duscae</h1>
-	<%= link_to "Iniciar Sesión","#", class: 'btn btn-default btn-sm' %>
+	
 
-	<%= link_to "Registrarse","http://google.com", class: 'btn btn-primary btn-sm' %>
+	<% if user_signed_in? %>
+		<%= link_to "Ver sitio en desarrollo","http://codebots.net", class: 'btn btn-default btn-sm' %>
+	<% else %>
+		<p>Si eres nuevo en el sitio 
+		<%= link_to "Registrate",new_user_registration_path, class: 'btn btn-primary btn-sm' %>
+		</p>
+	<% end %>
+	
 </div>
