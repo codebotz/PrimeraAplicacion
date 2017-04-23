@@ -5,8 +5,21 @@
         <%= devise_error_messages! %>
 
         <div class="field form-group">
+          <%= f.label :nombres %><br />
+          <%= f.text_field :nombres, autofocus: true, class: 'form-control' %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :apellidos %><br />
+          <%= f.text_field :apellidos, class: 'form-control' %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :Nickname %><br />
+          <%= f.text_field :nickname, class: 'form-control' %>
+        </div>
+
+        <div class="field form-group">
           <%= f.label :correo_electrónico %><br />
-          <%= f.email_field :email, autofocus: true %>
+          <%= f.email_field :email%>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
