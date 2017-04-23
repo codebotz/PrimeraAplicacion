@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  #agregndo helper de autenticacion 
+  #lo de abajo es lo mismo, solo que como hay que especificar as metodos, ponemos el except, que tenga que estar autenticado excepto en los metodps index(mostrar todos) y show(ver post especifico)
+  #before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
+  before_action :authenticate_user!, except: [:index,:show]
+  #llamar a ese metodo antes de llamar a los metodos que estan dentro de los []
+  before_action :correct_user, only: [:update,:edit,:destroy]
   # GET /posts
   # GET /posts.json
   def index
@@ -14,7 +19,9 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    #modificando para pasar parametro de id usuario
+    #@post = Post.new
+    @post = current_user.posts.build
   end
 
   # GET /posts/1/edit
@@ -24,7 +31,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    #modificando para pasar parametro de id usuario
+    #@post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
@@ -62,6 +71,12 @@ class PostsController < ApplicationController
   end
 
   private
+
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id]) #tendra el valor del id del usuario actual
+      redirect_to post_path, notice: "No está autorizado para modificar este post" if @post.nil? #esto solo cuando la variable post sea igual a new(cuando no se encuentre el id del usuario actual)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
