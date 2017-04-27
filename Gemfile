@@ -47,6 +47,11 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'bcrypt', '~> 3.1.11'
 #gem 'bcrypt', platforms: :ruby
 
+#Instalando gema paperclip para el manejo de imagenes
+#gem 'paperclip', '~> 5.1'
+#Cambio de version a una mas anterior
+#gem 'paperclip', '~> 4.3', '>= 4.3.7'
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do
