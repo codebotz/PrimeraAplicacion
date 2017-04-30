@@ -65,6 +65,9 @@ gem 'will_paginate', '~> 3.1.0'
 #modificando la gema de paginacion
 gem 'will_paginate-bootstrap'
 
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   #comentare esto de aqui
@@ -80,7 +83,7 @@ end
 
 group :production do 
 	gem 'pg'
-	gem 'rails_12factor'
+	gem 'rails_12factor', '~> 0.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
