@@ -12,6 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require bootstrap
-//= require turbolinks
+//= require isotope/jquery.isotope
+//= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
 //= require_tree .
+/**$(document).ready(function(){
+   alert("Javascript y Jquery estan cargados.");
+#});
+**/
+
+/*esta linea iba en la 17... //= require turbolinks*/
+$(function(){
+  $('#postdiv').masonry({
+    itemSelector: '.box',
+    columnWidth: 200,
+    isAnimated: !Modernizr.csstransitions,
+    isFitWidth: true
+  });
+});

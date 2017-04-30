@@ -24,6 +24,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+#jquery turbolinks
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -52,11 +54,15 @@ gem 'bcrypt', '~> 3.1.11'
 #Cambio de version a una mas anterior
 #gem 'paperclip', '~> 4.3', '>= 4.3.7'
 gem "paperclip", "~> 5.0.0"
+#instalando masonru jquery
+#gem 'masonry-rails', '~> 0.2.4'
+gem 'masonry-rails', '~> 0.2.4'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  #comentare esto de aqui
+  #gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end

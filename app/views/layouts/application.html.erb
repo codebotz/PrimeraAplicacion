@@ -12,11 +12,18 @@
   <body>
   <%= render 'layouts/header' %>
 
-	<div class="container">
-      <% flash.each do |name, msg|%>
-        <%= content_tag(:div, msg, class: "alert alert-info") %>
-      <% end %>
-      <%= yield %>
+	<div class="container-fluid">
+      <div class="row">
+          <% flash.each do |name, msg|%>
+            <%= content_tag(:div, msg, class: "alert alert-info") %>
+          <% end %>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

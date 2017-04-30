@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #Configuración de páginas
   get 'about' => 'pages#about'
-
+  
   get 'archivoprueba' => 'prueba#archivoprueba'
   get 'rails' => 'prueba#rails'
 

@@ -57,8 +57,12 @@ Rails.application.configure do
 
   #paperclip
   #Paperclip.options[:command_path] = '{C:\Program Files (x86)\GnuWin32\bin}'
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
   #Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
-  Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.9.1-Q16/convert"
+  #Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.9.1-Q16/convert"
+  #Paperclip.options[:command_path] = '{C:\ImageMagick-6.7.5-Q8\}'
+  #Paperclip.options[:command_path] = "C:\\Program Files\\ImageMagick-6.9.7-Q16-HDRI"
+  #Paperclip.options[:command_path] = "C:\\Program Files\\ImageMagick-6.9.1-Q16\\"
 
 
 end
