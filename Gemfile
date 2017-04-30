@@ -58,7 +58,12 @@ gem "paperclip", "~> 5.0.0"
 #gem 'masonry-rails', '~> 0.2.4'
 gem 'masonry-rails', '~> 0.2.4'
 #instalando fontawesome
-gem 'font-awesome-sass'
+#gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+#Agregando gema para Paginación
+gem 'will_paginate', '~> 3.1.0'
+#modificando la gema de paginacion
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
