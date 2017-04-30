@@ -1,4 +1,4 @@
-
+<%= render 'pages/home' if !user_signed_in? %>
 <div class="col-md-12 col-md-offset-0">
 <p id="notice"><%= notice %></p>
   
@@ -17,8 +17,13 @@
             <% if post.user == current_user %>              
             <br/>
             <div class="actions">
-              <%= link_to 'Editar', edit_post_path(post) %>
-              <%= link_to 'Eliminar', post, method: :delete, data: { confirm: 'Estás seguro?' } %>
+              <%= link_to edit_post_path(post) do %>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Editar
+              <%end%>
+              <%= link_to post, method: :delete, data: { confirm: 'Estás seguro?' } do %>
+                <i class="fa fa-trash" aria-hidden="true"></i> Eliminar
+
+              <%end%>
             </div>
             <%end%>
 

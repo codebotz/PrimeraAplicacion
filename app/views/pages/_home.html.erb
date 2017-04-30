@@ -1,13 +1,8 @@
 <div class="col-md-8 col-md-offset-2">
 	<div class="jumbotron center">
 		<h1>Bienvenido a Duscae</h1>
-
-		<% if user_signed_in? %>
-			<%= link_to "Ver sitio en desarrollo","http://codebots.net", class: 'btn btn-default btn-sm' %>
-		<% else %>
 			<p>Si eres nuevo en el sitio 
 			<%= link_to "Registrate",new_user_registration_path, class: 'btn btn-primary btn-sm' %>
 			</p>
-		<% end %>
 	</div>		
 </div>

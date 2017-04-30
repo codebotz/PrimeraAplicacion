@@ -13,12 +13,21 @@
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><%= link_to "Inicio", root_path %></li>
-		        <li><%= link_to "Posts", posts_path %></li>
+		        <li><%= link_to root_path do%>
+		        		<i class="fa fa-home" aria-hidden="true"></i> Inicio
+		        	<%end%>
+		        </li>
+		        <li><%= link_to posts_path do %>
+		        		<i class="fa fa-diamond" aria-hidden="true"></i> Posts
+		        	<%end%>
+		        </li>
 		        <% if user_signed_in? %>
-		        <li><%= link_to 'Nuevo Post', new_post_path %></li>
+		        <li><%= link_to new_post_path do %>
+		        		<i class="fa fa-plus-circle" aria-hidden="true"></i> Nuevo post
+		        	<%end%>
+		        </li>
 		        <li class="dropdown">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuenta<span class="caret"></span></a>
+		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">	<i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="caret"></span></a>
 			        <ul class="dropdown-menu">
 				        <li><%= link_to 'Editar cuenta', edit_user_registration_path %></li>
 				        <li><%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete %></li>

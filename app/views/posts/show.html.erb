@@ -12,9 +12,13 @@
 
             	<div class="panel-footer">
 					<% if @post.user == current_user %>
-						<%= link_to 'Editar', edit_post_path(@post) %> |
+						<%= link_to edit_post_path(@post) do %> 
+						<i class="fa fa-pencil" aria-hidden="true"></i> Editar
+						<%end%>
 					<%end%>
-					<%= link_to 'Regresar', posts_path %>
+					<%= link_to posts_path do %>
+						<i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar
+					<%end%>
 				</div>
 			</div>
 		</div>

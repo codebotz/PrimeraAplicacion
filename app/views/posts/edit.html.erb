@@ -5,8 +5,12 @@
 	<%= render 'form', post: @post %>
 
 	<div class="panel-footer">
-		<%= link_to 'Ir al post', @post %> |
-		<%= link_to 'Regresar', posts_path %>
+		<%= link_to @post do %> 
+			<i class="fa fa-diamond" aria-hidden="true"></i> Ir al post
+		<%end%>
+		<%= link_to posts_path do %>
+			<i class="fa fa-arrow-left" aria-hidden="true"></i> Regresar
+		<%end%>
 	</div>
 	</div>
 </div>
