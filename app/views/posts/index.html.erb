@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
 
+<div class="col-md-12 col-md-offset-0">
+<p id="notice"><%= notice %></p>
+  
     <div id="postdiv" class="grid container-fluid transitions-enabled centered clearfix masonry">
       <% @posts.each do |post| %>
         <div class="grid box panel panel-default">
@@ -9,17 +11,19 @@
           <div class="panel-body">
             <!--%= link_to 'Show', post %-->
             <!-- , style: "max-width:400px;" -->
-            <b><%= post.description %></b>
-            <br/>
-            <%= post.user.email if post.user %>
-            <br/>
+            <p><strong><%= post.description %></strong></p>
+            <p><%= post.user.email if post.user %></p>
             <code><%= post.created_at %></code>
             <% if post.user == current_user %>              
             <br/>
-            <%= link_to 'Edit', edit_post_path(post) %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="actions">
+              <%= link_to 'Editar', edit_post_path(post) %>
+              <%= link_to 'Eliminar', post, method: :delete, data: { confirm: 'Estás seguro?' } %>
+            </div>
             <%end%>
+
           </div>
         </div>
         <% end %>
     </div>      
+</div>      

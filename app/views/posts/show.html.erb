@@ -1,10 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="well">
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+				<%= image_tag @post.image.url(:medium) %>
+			</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-<% if @post.user == current_user %>
-	<%= link_to 'Edit', edit_post_path(@post) %> |
-<%end%>
-	<%= link_to 'Back', posts_path %>
+			<div class="panel-body">
+				<p><strong><%= @post.description %></strong></p>
+            	<p><%= @post.user.email if @post.user %></p>
+
+            	<div class="panel-footer">
+					<% if @post.user == current_user %>
+						<%= link_to 'Editar', edit_post_path(@post) %> |
+					<%end%>
+					<%= link_to 'Regresar', posts_path %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
