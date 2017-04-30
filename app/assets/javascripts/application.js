@@ -16,7 +16,6 @@
 //= require bootstrap
 //= require isotope/jquery.isotope
 //= require masonry/jquery.masonry
-//= require masonry/jquery.imagesloaded.min
 //= require_tree .
 /**$(document).ready(function(){
    alert("Javascript y Jquery estan cargados.");
