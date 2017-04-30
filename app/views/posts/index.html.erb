@@ -8,7 +8,7 @@
       <% @posts.each do |post| %>
         <div class="grid box panel panel-default">
         <%= link_to(post) do %>
-          <%= image_tag post.image.url %>
+          <%= image_tag post.image.url, class: "img-responsive"%>
           <% end %>
           <div class="panel-body">
             <!--%= link_to 'Show', post %-->
@@ -33,7 +33,7 @@
         </div>
         <% end %>
     </div>      
-  <div class="center">
+  <div class="center col-md-12 col-md-offset-0">
     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
   </div>
 </div>      
