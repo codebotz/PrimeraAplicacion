@@ -36,6 +36,23 @@
           transition: all .1s ease-in-out;
 }
 
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item { width: 20%; }
+
+.grid-item {
+  float: left;
+  height: 100px;
+  background: #0D8;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+}
+
+
+
+/*
+
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
@@ -51,3 +68,5 @@
 .col3 img { max-width: 280px; }
 .col4 img { max-width: 380px; }
 .col5 img { max-width: 480px; }
+
+*/

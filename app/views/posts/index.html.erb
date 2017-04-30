@@ -4,9 +4,10 @@
   <div class="center">
     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
   </div>
+  <div class="grid-sizer"></div>
     <div id="postdiv" class="grid container-fluid transitions-enabled centered clearfix masonry">
       <% @posts.each do |post| %>
-        <div class="grid box panel panel-default">
+        <div class="box panel panel-default">
         <%= link_to(post) do %>
           <%= image_tag post.image.url, class: "img-responsive"%>
           <% end %>
