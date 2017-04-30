@@ -8,4 +8,6 @@ class Post < ActiveRecord::Base
 	#, default_url: "/images/missing.png"
   	#validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  	validates :description, presence: true
+  	validates :image, presence: true
 end

@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
          has_many :posts
+         validates :nombres, presence: true
+         validates :apellidos, presence: true
+         validates :nickname, presence: true
+         validates :nickname, uniqueness: true
 end

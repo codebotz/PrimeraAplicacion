@@ -1,7 +1,9 @@
 <%= render 'pages/home' if !user_signed_in? %>
 <div class="col-md-12 col-md-offset-0">
 <p id="notice"><%= notice %></p>
-  
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
     <div id="postdiv" class="grid container-fluid transitions-enabled centered clearfix masonry">
       <% @posts.each do |post| %>
         <div class="grid box panel panel-default">
@@ -12,7 +14,7 @@
             <!--%= link_to 'Show', post %-->
             <!-- , style: "max-width:400px;" -->
             <p><strong><%= post.description %></strong></p>
-            <p><%= post.user.email if post.user %></p>
+            <p><%= post.user.nickname %></p>
             <code><%= post.created_at %></code>
             <% if post.user == current_user %>              
             <br/>
@@ -31,8 +33,7 @@
         </div>
         <% end %>
     </div>      
+  <div class="center">
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  </div>
 </div>      
-
-<div class="center">
-  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-</div>

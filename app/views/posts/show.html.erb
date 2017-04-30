@@ -8,7 +8,7 @@
 
 			<div class="panel-body">
 				<p><strong><%= @post.description %></strong></p>
-            	<p><%= @post.user.email if @post.user %></p>
+            	<p><%= @post.user.nickname %></p>
 
             	<div class="panel-footer">
 					<% if @post.user == current_user %>
